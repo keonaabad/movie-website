@@ -9,6 +9,8 @@ body {
 }
 
 
+
+/* Intro Banner*/
 .intro-picture{
     margin: 0;
     padding: 0;
@@ -18,19 +20,22 @@ body {
 }
 
 .intro-picture {
-    width: 100%;        /* Set the container width to 100% */
-    height: auto;       /* Automatically adjust height to maintain aspect ratio */
-    overflow: hidden;   /* Hide any overflow to ensure the image fits within the container */
+    width: 100%;        
+    height: auto;       
+    overflow: hidden;   
     
 }
 
 .intro-picture img {
     position:relative;
-    width: 100%;        /* Make the image width 100% of the container */
-    height: 100%;       /* Make the image height 100% of the container */
-    object-fit: cover;  /* Scale the image to cover the entire container, maintaining aspect ratio */
+    width: 100%;        
+    height: 100%;     
+    object-fit: cover; 
 
 }
+
+
+
 
 .anime-haven{
     position:absolute;
@@ -50,6 +55,13 @@ body {
     color: #FF6F6F;
 }
 
+
+/* Search bar */
+.search-wrapper{
+    position: absolute;
+    right: 2%;
+    top: 585px
+}
 input {
     border: none;
     background: none;
@@ -57,27 +69,26 @@ input {
   }
 
 
-  
-
- .search-wrapper{
-    position: absolute;
-    top: 590px;
-    right: 300px
- } 
-.search-box{
-    width: 300%;
+  .search-box {
+    width: 500px;
     height: 45px;
     border-radius: 200px;
     background: rgba(102, 102, 102, 0.53);
-    opacity: .6;
-    right: 2%;
-    top: 585px
+    opacity: 0.6;
+    display: flex; 
+}
 
+.search-text {
+    flex: 1; 
+    color: white;
+    font-size: 20px;
+    padding-left: 20px; 
+    padding-right: 80px
 }
 
 .search-image{
     position: absolute;
-    left: 380px;
+    left: 450px;
     top: 10px;
 
 }
@@ -85,6 +96,8 @@ input {
 .search-image:hover{
 cursor: pointer;
 }
+
+
 /* Popular Movie mages Placement*/
 .movie-containers{
     position: relative;
@@ -94,6 +107,7 @@ cursor: pointer;
     padding-bottom: 225px
 
 }
+
 
 .movie-wrapper{
     position: absolute;
@@ -115,26 +129,26 @@ cursor: pointer;
     border-color: white;
     border-style: solid;
     transition: transform 1s ease, opacity 0.5s ease;
-    overflow: hidden; /* Hide overflowing content */
+    overflow: hidden; 
   }
   
   .movie-box:hover {
     cursor: pointer;
     transform: scale(1.1);
     opacity: 1;
-    z-index: 1; /* Ensure the hovered box is above other boxes */
+    z-index: 1; 
   }
   
   .movie-box span {
     position: absolute;
     display: none;
     text-align: center;
-    width: 100%; /* Expand to cover the entire box */
-    height: 100%; /* Expand to cover the entire box */
-    background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0, 0, 0, 0.8); 
     color: white;
     box-sizing: border-box;
-    transition: opacity 10s ease-in-out; /* Fade-in effect */
+    transition: opacity 10s ease-in-out; 
   }
   
   .movie-box:hover span {
@@ -285,7 +299,10 @@ cursor: pointer;
 }
 
 
-/* action Movie mages Placement*/
+
+
+
+/* Action Movie mages Placement*/
 .movie-box[style*="bleach"]{
     background-position: center;
     background-size: 320px;
@@ -320,6 +337,8 @@ cursor: pointer;
     background-position: center;
     background-size: 340px;
 }
+
+
 
 
 

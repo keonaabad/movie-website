@@ -1,3 +1,67 @@
+// Search Engine  
+const searchInput = document.getElementById("search-text");
+const moviesFromDOM = document.getElementsByClassName("movie-box");
+const popularHeading = document.querySelectorAll(".popular");
+const rightArrow = document.querySelectorAll(".right-arrow");
+
+searchInput.addEventListener("keyup", (event) => {
+  const { value } = event.target;
+  const searchQuery = value.toLowerCase();
+  const uniqueMovies = new Set(); // Use a Set to store unique movie names
+
+  for (const nameElement of moviesFromDOM) {
+    let name = nameElement.textContent.toLowerCase();
+    if (name.includes(searchQuery)) {
+      uniqueMovies.add(name); // Add matching movie names to the set
+    }
+  }
+
+  for (const nameElement of moviesFromDOM) {
+    let name = nameElement.textContent.toLowerCase();
+    if (uniqueMovies.has(name)) {
+      nameElement.style.display = "block";
+      uniqueMovies.delete(name); // Remove the displayed movie name from the set
+    } else {
+      nameElement.style.display = "none";
+    }
+  }
+
+  // Loop through each element with class "popular"
+  popularHeading.forEach((element) => {
+    if (searchQuery && uniqueMovies.size === 0) {
+      element.style.display = "none";
+    } else {
+      element.style.display = "block";
+    }
+  });
+
+  // Loop through each element with class "right-arrow"
+  rightArrow.forEach((element) => {
+    if (searchQuery && uniqueMovies.size === 0) {
+      element.style.display = "none";
+    } else {
+      element.style.display = "block";
+    }
+  });
+
+  
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const carouselWrapper = document.querySelector(".movie-container-1 .movie-wrapper");
 const arrowRight = document.querySelector(".movie-container-1 .right-arrow");
 const arrowLeft = document.querySelector(".movie-container-1 .left-arrow");
@@ -427,4 +491,4 @@ psychologicalArrowLeft.addEventListener("click", () => {
 
 
 
-// Search Bar
+
