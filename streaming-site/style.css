@@ -1,0 +1,402 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #202020;
+    font-family: "Arial", sans-serif;
+    color: #E8E8E8;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    zoom: 1;
+}
+
+
+.intro-picture{
+    margin: 0;
+    padding: 0;
+    width: 1400px;
+    height: 340px;
+
+}
+
+.intro-picture {
+    width: 100%;        /* Set the container width to 100% */
+    height: auto;       /* Automatically adjust height to maintain aspect ratio */
+    overflow: hidden;   /* Hide any overflow to ensure the image fits within the container */
+    
+}
+
+.intro-picture img {
+    position:relative;
+    width: 100%;        /* Make the image width 100% of the container */
+    height: 100%;       /* Make the image height 100% of the container */
+    object-fit: cover;  /* Scale the image to cover the entire container, maintaining aspect ratio */
+
+}
+
+.anime-haven{
+    position:absolute;
+    top: -60px;
+    left: 20px;
+    color: #FFF;
+    font-family: Permanent Marker;
+    font-size: 75px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-shadow: -8px 8px 0 #000, 1px -1px 0 #000, -5px 5px 0 #000, 8px 8px 0 #000;
+
+}
+
+.haven{
+    color: #FF6F6F;
+}
+
+input {
+    border: none;
+    background: none;
+    outline: none;
+  }
+
+
+  
+
+ .search-wrapper{
+    position: absolute;
+    top: 590px;
+    right: 300px
+ } 
+.search-box{
+    width: 300%;
+    height: 45px;
+    border-radius: 200px;
+    background: rgba(102, 102, 102, 0.53);
+    opacity: .6;
+    right: 2%;
+    top: 585px
+
+}
+
+.search-image{
+    position: absolute;
+    left: 380px;
+    top: 10px;
+
+}
+
+.search-image:hover{
+cursor: pointer;
+}
+/* Popular Movie mages Placement*/
+.movie-containers{
+    position: relative;
+    display: flex;
+    gap: 30px;
+    margin-top: 100px;
+    padding-bottom: 225px
+
+}
+
+.movie-wrapper{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+    padding-left: 16px;
+
+
+}
+.movie-box {
+    position: relative;
+    border-radius: 10px;
+    width: 320px;
+    height: 180px;
+    border-color: white;
+    border-style: solid;
+    transition: transform 1s ease, opacity 0.5s ease;
+    overflow: hidden; /* Hide overflowing content */
+  }
+  
+  .movie-box:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    opacity: 1;
+    z-index: 1; /* Ensure the hovered box is above other boxes */
+  }
+  
+  .movie-box span {
+    position: absolute;
+    display: none;
+    text-align: center;
+    width: 100%; /* Expand to cover the entire box */
+    height: 100%; /* Expand to cover the entire box */
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    color: white;
+    box-sizing: border-box;
+    transition: opacity 10s ease-in-out; /* Fade-in effect */
+  }
+  
+  .movie-box:hover span {
+    display: block;
+    opacity: 1;
+  }
+  
+  
+
+.right-arrow{
+    font-size: 120px;
+    position: absolute;
+    opacity: .8;
+    top: 35px;
+    left: 93.5%;
+    transition: transform 1s ease;
+}
+
+.left-arrow{
+    font-size: 120px;
+    position: absolute;
+    opacity: .8;
+    top: 35px;
+    left: 25px;
+    transition: transform 1s ease;    
+}
+
+.right-arrow:hover,
+.left-arrow:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+.popular{
+    position: absolute;
+    top: -85px;
+    left: 20px
+}
+.movie-box[style*="original-naruto.jpg"]{
+    background-position: center;
+    background-size: 360px;
+}
+
+.movie-box[style*="hunter-x-hunter.jpg"]{
+    background-position: center;
+    background-size: 450px;
+}
+
+.movie-box[style*="one-piece.webp"]{
+    background-position: center;
+    background-size: 420px;
+}
+
+.movie-box[style*="attack-on-titan.avif"]{
+    background-position: center;
+    background-size: 420px;
+}
+
+.movie-box[style*="dragon-ball-z"]{
+    background-position: center;
+    background-size: 420px;
+}
+
+.movie-box[style*="demon-slayer"]{
+    background-position: center;
+    background-size: 420px;
+}
+
+.movie-box[style*="jojos-bizarre-adventures.jpeg"]{
+    background-position: center;
+    background-size: 345px;
+}
+
+
+
+/* Comedy Movie mages Placement*/
+.movie-box[style*="barakamon"]{
+    background-position: center;
+    background-size: 320px;
+}
+
+.movie-box[style*="gintama"]{
+    background-position: center;
+    background-size: 320px;
+}
+
+.movie-box[style*="grand-blue"]{
+    background-position: center;
+    background-size: 320px;
+}
+
+.movie-box[style*="kiss-him-not-me"]{
+    background-position: center;
+    background-size: 340px;
+}
+
+.movie-box[style*="konosuba"]{
+    background-position: center;
+    background-size: 350px;
+}
+
+.movie-box[style*="prison-school"]{
+    background-position: center;
+    background-size: 350px;
+}
+
+.movie-box[style*="to-be-hero"]{
+    background-position: center;
+    background-size: 340px;
+}
+
+
+
+
+/* Romantic Movie mages Placement*/
+.movie-box[style*="given"]{
+    background-position: center;
+    background-size: 350px;
+}
+
+.movie-box[style*="kasima-kiss"]{
+    background-position: center;
+    background-size: 318px;
+}
+
+.movie-box[style*="maid-sama"]{
+    background-position: center;
+    background-size: 330px;
+}
+
+.movie-box[style*="horimiya"]{
+    background-position: center;
+    background-size: 360px;
+}
+
+.movie-box[style*="my-love-mix"]{
+    background-position: center;
+    background-size: 350px;
+}
+
+.movie-box[style*="ao-haru"]{
+    background-position: center;
+    background-size: 350px;
+}
+
+.movie-box[style*="romantic-killer"]{
+    background-position: center;
+    background-size: 340px;
+}
+
+
+/* action Movie mages Placement*/
+.movie-box[style*="bleach"]{
+    background-position: center;
+    background-size: 320px;
+}
+
+.movie-box[style*="code-geass"]{
+    background-position: center;
+    background-size: 320px;
+}
+
+.movie-box[style*="juistsu-kaisen"]{
+    background-position: center;
+    background-size: 320px;
+}
+
+.movie-box[style*="mob-psycho"]{
+    background-position: center;
+    background-size: 340px;
+}
+
+.movie-box[style*="kingdom"]{
+    background-position: center;
+    background-size: 320px;
+}
+
+.movie-box[style*="naruto-shippuden"]{
+    background-position: center;
+    background-size: 330px;
+}
+
+.movie-box[style*="vinland"]{
+    background-position: center;
+    background-size: 340px;
+}
+
+
+
+
+/* Dark Twisted Movie mages Placement*/
+.movie-box[style*="tokyo-ghoul"]{
+    background-position: center;
+    background-size: 320px;
+}
+
+.movie-box[style*="the-promised-neverland"]{
+    background-position: center;
+    background-size: 290px;
+}
+
+.movie-box[style*="paranoia-agent"]{
+    background-position: center;
+    background-size: 320px;
+}
+
+.movie-box[style*="monster"]{
+    background-position: center;
+    background-size: 340px;
+}
+
+.movie-box[style*="erased"]{
+    background-position: center;
+    background-size: 320px;
+}
+
+.movie-box[style*="elfen-lied"]{
+    background-position: center;
+    background-size: 310px;
+}
+
+.movie-box[style*="corpse-party"]{
+    background-position: center;
+    background-size: 330px;
+}
+
+
+
+
+
+
+/* Psychological Movie mages Placement*/
+.movie-box[style*="hibane-renme"]{
+    background-position: center;
+    background-size: 300px;
+}
+
+.movie-box[style*="koukaku-kido"]{
+    background-position: center;
+    background-size: 320px;
+}
+
+.movie-box[style*="mawaru-pe"]{
+    background-position: center;
+    background-size: 290px;
+}
+
+.movie-box[style*="mushishi"]{
+    background-position: center;
+    background-size: 320px;
+}
+
+.movie-box[style*="perfect-blue"]{
+    background-position: center;
+    background-size: 320px;
+}
+
+.movie-box[style*="serial-experiments"]{
+    background-position: center;
+    background-size: 270px;
+}
+
+.movie-box[style*="shinsekai-yori"]{
+    background-position: center;
+    background-size: 330px;
+}
